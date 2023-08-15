@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: rgb(154, 189, 232);
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 150px;
+}
+
+h1 {
+    color: darkgreen;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+#description {
+    text-align: center;
+}
+
+main {
+    flex: auto;
+    padding-top: 20px;
+}
+
+#input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 40px; */
+}
+
+label {
+    font-size: larger;
+}
+
+input {
+    text-align: right;
+}
+
+input[type="number"] {
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px 0;
+    box-shadow: 0 0 30px 8px rgba(0, 0, 0, 0.06);
+    font-size: larger;
+    width: 375px;
+}
+
+input[type="number"]:hover {
+    box-shadow: 0;
+}
+
+input[type="number"]::placeholder {
+    /* Firefox, Chrome, Opera */
+    text-align: right;
+}
+
+input[type="number"]:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    text-align: right;
+}
+input[type="number"]::-ms-input-placeholder {
+    /* Microsoft Edge */
+    text-align: right;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+select[type="number"] {
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px 0;
+    box-shadow: 0 0 30px 8px rgba(0, 0, 0, 0.06);
+    font-size: larger;
+    width: 375px;
+}
+
+select[type="number"] {
+    /* Firefox, Chrome, Opera */
+    text-align: right;
+}
+
+select[type="number"]:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    text-align: right;
+}
+select[type="number"]::-ms-input-placeholder {
+    /* Microsoft Edge */
+    text-align: right;
+}
+
+#submit-btn {
+    background-color: #015485;
+    color: aliceblue;
+    font-size: larger;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+#reset-btn {
+    margin: 3px 0;
+    background-color: #c55155;
+    color: aliceblue;
+    font-size: larger;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+#output-container {
+    text-align: center;
+    font-size: larger;
+}
+
+#output {
+    font-size: larger;
+    margin: 10px;
+    width: 250px;
+    height: fit-content;
+    display: inline-block;
+    color: rgb(197, 81, 85);
+}
+
+footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 120px;
+}
+
+#footer {
+    margin-bottom: 5px;
+}
+
+a {
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        margin-top: 50px;
+    }
+}
