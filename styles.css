@@ -177,6 +177,26 @@ td {
     border-left: none;
 }
 
+ul {
+    list-style-position: inside;
+}
+
+.ul-1 {
+    list-style-type: square;
+}
+
+.ul-2 {
+    list-style-type: disc;
+}
+
+.li-1 {
+    margin: 3px;
+}
+
+.li-2 {
+    margin: 8px;
+}
+
 /* #table {
     margin: 5px;
     border: 1px solid #003b5c;
