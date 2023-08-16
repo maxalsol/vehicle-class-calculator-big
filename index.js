@@ -23,13 +23,15 @@ function calculate(evt) {
     evt.preventDefault();
 
     // variables
-    let vehicleType = document.getElementById("vehicle-type").value;
-    let propultion = document.getElementById("propultion").value;
-    let axles = document.getElementById("axles").value;
-    let wheels = document.getElementById("wheels").value;
+    let vehicleType = document.getElementById("vehicle-type").selected;
+    let propultion = document.getElementById("propultion").selected;
+    let axles = document.getElementById("axles").selected;
+    let wheels = document.getElementById("wheels").selected;
     let gvm = document.getElementById("gvm").value;
     let tare = document.getElementById("tare").value;
     let seats = document.getElementById("seats").value;
+
+    console.log(vehicleType, propultion, axles, wheels, gvm, tare, seats);
 
     // logic
     // vehicle type

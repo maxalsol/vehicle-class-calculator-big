@@ -92,7 +92,7 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-select[type="number"] {
+select {
     border: 2px solid darkblue;
     border-radius: 5px;
     padding: 5px;
@@ -102,16 +102,16 @@ select[type="number"] {
     width: 375px;
 }
 
-select[type="number"] {
+select {
     /* Firefox, Chrome, Opera */
     text-align: right;
 }
 
-select[type="number"]:-ms-input-placeholder {
+select:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     text-align: right;
 }
-select[type="number"]::-ms-input-placeholder {
+select::-ms-input-placeholder {
     /* Microsoft Edge */
     text-align: right;
 }
