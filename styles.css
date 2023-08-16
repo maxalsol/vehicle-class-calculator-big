@@ -107,13 +107,21 @@ select {
     text-align: right;
 }
 
-select:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    text-align: right;
+select::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 12px;
 }
-select::-ms-input-placeholder {
-    /* Microsoft Edge */
-    text-align: right;
+select::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 12px;
+}
+select:-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 12px;
+}
+select:-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 12px;
 }
 
 #submit-btn {
