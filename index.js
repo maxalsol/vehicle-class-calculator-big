@@ -1,8 +1,4 @@
 // setup variables for input and output & access
-//let inputFields = document.getElementsByTagName("input");
-let numGvm = document.getElementById("gvm");
-let numTare = document.getElementById("tare");
-let numSeats = document.getElementById("seats");
 let submitBtn = document.getElementById("submit-btn");
 let resetBtn = document.getElementById("reset-btn");
 let output = document.getElementById("output");
@@ -23,37 +19,58 @@ function calculate(evt) {
     evt.preventDefault();
 
     // variables
-    let vehicleType = document.getElementById("vehicle-type").selected;
-    let propultion = document.getElementById("propultion").selected;
-    let axles = document.getElementById("axles").selected;
-    let wheels = document.getElementById("wheels").selected;
+    let vehicleType = document.getElementById("vehicle-type").value;
+    let propultion = document.getElementById("propultion").value;
+    let axles = document.getElementById("axles").value;
+    let wheels = document.getElementById("wheels").value;
     let gvm = document.getElementById("gvm").value;
     let tare = document.getElementById("tare").value;
     let seats = document.getElementById("seats").value;
 
-    console.log(vehicleType, propultion, axles, wheels, gvm, tare, seats);
+    let result = "";
 
-    // logic
-    // vehicle type
+    console.log(vehicleType);
+    console.log(propultion);
+    console.log(axles);
+    console.log(wheels);
+    console.log(gvm);
+    console.log(tare);
+    console.log(seats);
 
-    // is the vehicle propelled by human power?
-    // yes -> is an auxiliary engine fitted?
-    //     yes -> total output > 300 Watts?
-    //         no -> Class 'AB'
-    //     yes -> vehicle meets criteria for passenger vehicle NEXT
-    //      no -> total output > 300 Watts?
-    //          no -> Class 'AB'
-    //          yes -> vehicle meets criteria for passenger vehicle NEXT
-    // no -> Class 'AA'
+    // no input handling
+    if (vehicleType === "Select one") {
+        result = "Please enter data.";
+        output.textContent = result;
+        output.style.color = "#c55155";
+    } else if (propultion === "Select one") {
+        result = "Please enter data.";
+        output.textContent = result;
+        output.style.color = "#c55155";
+    } else if (axles === "Select one") {
+        result = "Please enter data.";
+        output.textContent = result;
+        output.style.color = "#c55155";
+    } else if (wheels === "Select one") {
+        result = "Please enter data.";
+        output.textContent = result;
+        output.style.color = "#c55155";
+    } else if (!gvm) {
+        result = "Please enter data.";
+        output.textContent = result;
+        output.style.color = "#c55155";
+    } else if (!tare) {
+        result = "Please enter data.";
+        output.textContent = result;
+        output.style.color = "#c55155";
+    } else if (!seats) {
+        result = "Please enter data.";
+        output.textContent = result;
+        output.style.color = "#c55155";
+    }
 
-    // differentiate between 2-wheeler and 3-8-wheeler
+    //logic
 
-    // 2-wheeler
-    // vehicle meets criteria for passnger vehicle?
-    // yes ->
-
-    // 3-x-wheeler
-    // vehicle meets criteria for passnger vehicle?
+    console.log(result);
 }
 
 // reset button
