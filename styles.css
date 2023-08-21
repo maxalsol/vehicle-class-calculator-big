@@ -36,6 +36,14 @@ main {
     padding-top: 20px;
 }
 
+.show {
+    display: inline-block;
+}
+
+.hide {
+    display: none;
+}
+
 #input-form {
     display: flex;
     flex-direction: column;
@@ -46,13 +54,12 @@ main {
 
 label {
     font-size: larger;
+    width: 375px;
+    text-align: left;
 }
 
 input {
     text-align: right;
-}
-
-input[type="number"] {
     border: 2px solid darkblue;
     border-radius: 5px;
     padding: 5px;
@@ -60,22 +67,24 @@ input[type="number"] {
     box-shadow: 0 0 30px 8px rgba(0, 0, 0, 0.06);
     font-size: larger;
     width: 375px;
+    /* Firefox */
+    -moz-appearance: textfield;
 }
 
-input[type="number"]:hover {
+input:hover {
     box-shadow: 0;
 }
 
-input[type="number"]::placeholder {
+input::placeholder {
     /* Firefox, Chrome, Opera */
     text-align: right;
 }
 
-input[type="number"]:-ms-input-placeholder {
+input:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     text-align: right;
 }
-input[type="number"]::-ms-input-placeholder {
+input::-ms-input-placeholder {
     /* Microsoft Edge */
     text-align: right;
 }
@@ -87,11 +96,6 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-/* Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
 select {
     border: 2px solid darkblue;
     border-radius: 5px;
@@ -100,9 +104,6 @@ select {
     box-shadow: 0 0 30px 8px rgba(0, 0, 0, 0.06);
     font-size: larger;
     width: 375px;
-}
-
-select {
     /* Firefox, Chrome, Opera */
     text-align: right;
 }
@@ -122,6 +123,15 @@ select:-ms-input-placeholder {
 select:-moz-placeholder {
     /* Firefox 18- */
     font-size: 12px;
+}
+
+#next-btn {
+    background-color: #015485;
+    color: aliceblue;
+    font-size: larger;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 5px;
 }
 
 #submit-btn {
@@ -151,7 +161,7 @@ select:-moz-placeholder {
 #output {
     font-size: larger;
     margin: 10px;
-    width: 250px;
+    width: 300px;
     height: fit-content;
     display: inline-block;
     color: rgb(197, 81, 85);

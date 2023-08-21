@@ -17,7 +17,9 @@
         </header>
         <main>
             <form id="input-form" action="#" method="POST">
-                <label for="vehicle-type">Vehicle type:</label>
+                <label id="vehicle-type-lable" for="vehicle-type"
+                    >Vehicle type:</label
+                >
                 <select id="vehicle-type" name="vehicle-type">
                     <option class="select-one" value="Select one">
                         Select one
@@ -26,14 +28,18 @@
                     <option id="option-1-2" value="Passenger Vehicle">
                         Passenger Vehicle
                     </option>
-                    <option id="option-1-3" value="Goods Vehicle">
+                    <option id="option-1-3" value="Omnibus">Omnibus</option>
+                    <option id="option-1-4" value="Goods Vehicle">
                         Goods Vehicle
                     </option>
-                    <option id="option-1-4" value="Trailer">Trailer</option>
+                    <option id="option-1-5" value="Trailer">Trailer</option>
                 </select>
+                <button id="next-btn" type="button">next</button>
                 <br />
-                <label for="propultion">Propultion:</label>
-                <select id="propultion" name="propultion">
+                <label id="propultion-label" for="propultion" class="hide"
+                    >Propultion:</label
+                >
+                <select id="propultion" class="hide" name="propultion">
                     <option class="select-one" value="Select one">
                         Select one
                     </option>
@@ -44,21 +50,24 @@
                         id="option-2-2"
                         value="Support by auxiliary engine < 300 Watts"
                     >
-                        Support by auxiliary engine < 300 Watts
+                        Support by auxilliary engine < 300 Watts
                     </option>
                     <option
                         id="option-2-3"
                         value="Support by auxiliary engine > 300 Watts"
                     >
-                        Support by auxiliary engine > 300 Watts
+                        Support by auxilliary engine > 300 Watts
                     </option>
                 </select>
                 <br />
-                <label for="axles">Number of axles:</label>
-                <select id="axles" type="number" name="axels">
+                <label id="axles-label" for="axles" class="hide"
+                    >Number of axles:</label
+                >
+                <select id="axles" class="hide" name="axels">
                     <option class="select-one" value="Select one">
                         Select one
                     </option>
+                    <option id="option-3-0" value="1">1</option>
                     <option id="option-3-1" value="1 front, 1 rear">
                         1 front, 1 rear
                     </option>
@@ -72,8 +81,10 @@
                         2 front, 2 rear
                     </option></select
                 ><br />
-                <label for="wheels">Number of wheels:</label>
-                <select id="wheels" type="number" name="wheels">
+                <label for="wheels" id="wheels-label" class="hide"
+                    >Number of wheels:</label
+                >
+                <select id="wheels" class="hide" name="wheels">
                     <option class="select-one" value="Select one">
                         Select one
                     </option>
@@ -96,23 +107,31 @@
                         2 front, 8 rear
                     </option></select
                 ><br />
-                <label for="gvm">GVM:</label>
+                <label id="gvm-label" for="gvm" class="hide">GVM:</label>
                 <input
                     id="gvm"
+                    class="hide"
                     type="number"
                     name="gvm"
                     placeholder="0kg"
                 /><br />
-                <label for="tare">Tare Weight:</label>
+                <label id="tare-label" for="tare" class="hide"
+                    >Tare Weight:</label
+                >
                 <input
                     id="tare"
+                    class="hide"
                     type="number"
                     name="tare"
                     placeholder="0kg"
                 /><br />
-                <label for="seats">Number of seats:</label>
+                <label id="seats-label" for="seats" class="hide"
+                    >Number of seats:</label
+                >
                 <input
                     id="seats"
+                    class="hide"
+                    1
                     type="number"
                     name="seats"
                     placeholder="0"
