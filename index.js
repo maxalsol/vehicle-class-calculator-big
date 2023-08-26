@@ -118,31 +118,91 @@ function next() {
     //! PASSENGER VEHICLE START
     else if (vehicleType === "Passenger Vehicle") {
         console.log("Klasse Passenger Vehicle gewählt!");
+
         // show options
+        document.getElementById("axles").classList.remove("hide");
+        document.getElementById("wheels").classList.remove("hide");
+        document.getElementById("gvm").classList.remove("hide");
+        document.getElementById("tare").classList.remove("hide");
+        document.getElementById("seats").classList.remove("hide");
+
+        // show labels
+        document.getElementById("axles-label").classList.remove("hide");
+        document.getElementById("wheels-label").classList.remove("hide");
+        document.getElementById("gvm-label").classList.remove("hide");
+        document.getElementById("tare-label").classList.remove("hide");
+        document.getElementById("seats-label").classList.remove("hide");
     }
 
     //! OMNIBUS START
     else if (vehicleType === "Omnibus") {
         console.log("Klasse Omnibus gewählt!");
+
         // show options
+        document.getElementById("axles").classList.remove("hide");
+        document.getElementById("wheels").classList.remove("hide");
+        document.getElementById("gvm").classList.remove("hide");
+        document.getElementById("tare").classList.remove("hide");
+        document.getElementById("seats").classList.remove("hide");
+
+        // show labels
+        document.getElementById("axles-label").classList.remove("hide");
+        document.getElementById("wheels-label").classList.remove("hide");
+        document.getElementById("gvm-label").classList.remove("hide");
+        document.getElementById("tare-label").classList.remove("hide");
+        document.getElementById("seats-label").classList.remove("hide");
     }
+
     //! GOODS VEHICLE START
     else if (vehicleType === "Goods Vehicle") {
         console.log("Klasse Goods Vehicle gewählt!");
+
         // show options
+        document.getElementById("axles").classList.remove("hide");
+        document.getElementById("wheels").classList.remove("hide");
+        document.getElementById("gvm").classList.remove("hide");
+        document.getElementById("tare").classList.remove("hide");
+        document.getElementById("seats").classList.remove("hide");
+
+        // show labels
+        document.getElementById("axles-label").classList.remove("hide");
+        document.getElementById("wheels-label").classList.remove("hide");
+        document.getElementById("gvm-label").classList.remove("hide");
+        document.getElementById("tare-label").classList.remove("hide");
+        document.getElementById("seats-label").classList.remove("hide");
     }
 
     //! TRAILER START
     else if (vehicleType === "Trailer") {
         console.log("Klasse Trailer gewählt!");
+
         // show options
         document.getElementById("axles").classList.remove("hide");
         document.getElementById("wheels").classList.remove("hide");
         document.getElementById("gvm").classList.remove("hide");
+
+        // show lables
+        document.getElementById("axles-label").classList.remove("hide");
+        document.getElementById("wheels-label").classList.remove("hide");
+        document.getElementById("gvm-label").classList.remove("hide");
     }
 }
 
 // reset button
 function reset() {
     output.textContent = "";
+
+    document.getElementById("propultion").classList.add("hide");
+    document.getElementById("axles").classList.add("hide");
+    document.getElementById("wheels").classList.add("hide");
+    document.getElementById("gvm").classList.add("hide");
+    document.getElementById("tare").classList.add("hide");
+    document.getElementById("seats").classList.add("hide");
+
+    document.getElementById("propultion-label").classList.add("hide");
+    document.getElementById("axles-label").classList.add("hide");
+    document.getElementById("wheels-label").classList.add("hide");
+    document.getElementById("gvm-label").classList.add("hide");
+    document.getElementById("tare-label").classList.add("hide");
+    document.getElementById("seats-label").classList.add("hide");
 }
