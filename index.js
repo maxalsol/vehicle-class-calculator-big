@@ -142,12 +142,12 @@ function calculate(evt) {
         console.log("Step 2 - Cycle");
         // aa
         if (propultion === "Human power only") {
-            output.textContent = "AA";
+            output.textContent = "AA - Pedal Cycle";
             output.style.color = "black";
         }
         // ab
         else if (propultion === "Support by auxiliary engine kl 300 Watts") {
-            output.textContent = "AB";
+            output.textContent = "AB - Power-assisted pedal cycle";
             output.style.color = "black";
         }
         // la
@@ -155,7 +155,7 @@ function calculate(evt) {
             propultion === "Piston engine kl 50ccm & Vmax kl 50km/h" &&
             wheels === "1 front, 1 rear"
         ) {
-            output.textContent = "LA";
+            output.textContent = "LA - Moped with two wheels";
             output.style.color = "black";
         }
         // lb1
@@ -163,13 +163,13 @@ function calculate(evt) {
             propultion === "Piston engine kl 50ccm & Vmax kl 50km/h" &&
             wheels === "1 front, 2 rear"
         ) {
-            output.textContent = "LB1";
+            output.textContent = "LB1 - Moped with three wheels";
             output.style.color = "black";
         } else if (
             propultion === "Other engine kl 50ccm & Vmax kl 50km/h" &&
             wheels === "1 front, 2 rear"
         ) {
-            output.textContent = "LB1";
+            output.textContent = "LB1 - Moped with three wheels";
             output.style.color = "black";
         }
         // lb2
@@ -177,13 +177,13 @@ function calculate(evt) {
             propultion === "Piston engine kl 50ccm & Vmax kl 50km/h" &&
             wheels === "2 front, 1 rear"
         ) {
-            output.textContent = "LB2";
+            output.textContent = "LB2 - Moped with three wheels";
             output.style.color = "black";
         } else if (
             propultion === "Other engine kl 50ccm & Vmax kl 50km/h" &&
             wheels === "2 front, 1 rear"
         ) {
-            output.textContent = "LB2";
+            output.textContent = "LB2 - Moped with three wheels";
             output.style.color = "black";
         }
         // lc
@@ -191,7 +191,7 @@ function calculate(evt) {
             propultion === "Piston engine gr 50ccm & Vmax gr 50km/h" &&
             wheels === "1 front, 1 rear"
         ) {
-            output.textContent = "LC";
+            output.textContent = "LC - Motorcycle";
             output.style.color = "black";
         }
         // ld
@@ -199,7 +199,7 @@ function calculate(evt) {
             propultion === "Piston engine gr 50ccm & Vmax gr 50km/h" &&
             wheels === "Side-car"
         ) {
-            output.textContent = "LD";
+            output.textContent = "LD - Motorcycle and side-car";
             output.style.color = "black";
         }
         // le1
@@ -207,7 +207,7 @@ function calculate(evt) {
             propultion === "Piston engine gr 50ccm & Vmax gr 50km/h" &&
             wheels === "1 front, 2 rear"
         ) {
-            output.textContent = "LE1";
+            output.textContent = "LE1 - Motor tri-cycle";
             output.style.color = "black";
         }
         // le2
@@ -215,7 +215,7 @@ function calculate(evt) {
             propultion === "Piston engine gr 50ccm & Vmax gr 50km/h" &&
             wheels === "2 front, 1 rear"
         ) {
-            output.textContent = "LE2";
+            output.textContent = "LE2 - Motor tri-cycle";
             output.style.color = "black";
         }
     }
