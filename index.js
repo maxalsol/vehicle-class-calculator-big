@@ -15,75 +15,6 @@ nextBtn.addEventListener("touchend", next);
 submitBtn.addEventListener("touchend", calculate);
 resetBtn.addEventListener("touchend", reset);
 
-// function with variables set
-// calculate based on formula & output on screen
-// handle empty inputs
-function calculate(evt) {
-    evt.preventDefault();
-
-    // variables
-    let vehicleType = document.getElementById("vehicle-type").value;
-    let propultion = document.getElementById("propultion").value;
-    let axles = document.getElementById("axles").value;
-    let wheels = document.getElementById("wheels").value;
-    let gvm = document.getElementById("gvm").value;
-    let tare = document.getElementById("tare").value;
-    let seats = document.getElementById("seats").value;
-
-    let result = "";
-
-    // no input handling
-    // if (vehicleType === "Select one") {
-    //     result = "Please enter data.";
-    //     output.textContent = result;
-    //     output.style.color = "#c55155";
-    // } else if (propultion === "Select one") {
-    //     result = "Please enter data.";
-    //     output.textContent = result;
-    //     output.style.color = "#c55155";
-    // } else if (axles === "Select one") {
-    //     result = "Please enter data.";
-    //     output.textContent = result;
-    //     output.style.color = "#c55155";
-    // } else if (wheels === "Select one") {
-    //     result = "Please enter data.";
-    //     output.textContent = result;
-    //     output.style.color = "#c55155";
-    // } else if (!gvm) {
-    //     result = "Please enter data.";
-    //     output.textContent = result;
-    //     output.style.color = "#c55155";
-    // } else if (!tare) {
-    //     result = "Please enter data.";
-    //     output.textContent = result;
-    //     output.style.color = "#c55155";
-    // } else if (!seats) {
-    //     result = "Please enter data.";
-    //     output.textContent = result;
-    //     output.style.color = "#c55155";
-    // } else
-
-    // if (result === "") {
-    //     result = "Please enter correct data.";
-    //     output.textContent = result;
-    //     output.style.color = "#c55155";
-    // } else if (result === "aa") {
-    //     result = "Class AA";
-    //     output.textContent = result;
-    //     output.style.color = "black";
-    // }
-
-    // console.log(vehicleType);
-    // console.log(propultion);
-    // console.log(axles);
-    // console.log(wheels);
-    // console.log(gvm);
-    // console.log(tare);
-    // console.log(seats);
-
-    //logic
-}
-
 // next button
 
 function next() {
@@ -100,7 +31,7 @@ function next() {
 
     //! CYCLES START
     if (vehicleType === "Cycle") {
-        console.log("Klasse Cycle gewählt!");
+        console.log("Step 1 - Klasse Cycle gewählt!");
 
         // show options
         document.getElementById("propultion").classList.remove("hide");
@@ -117,7 +48,7 @@ function next() {
 
     //! PASSENGER VEHICLE START
     else if (vehicleType === "Passenger Vehicle") {
-        console.log("Klasse Passenger Vehicle gewählt!");
+        console.log("Step 1 - Klasse Passenger Vehicle gewählt!");
 
         // show options
         document.getElementById("axles").classList.remove("hide");
@@ -136,7 +67,7 @@ function next() {
 
     //! OMNIBUS START
     else if (vehicleType === "Omnibus") {
-        console.log("Klasse Omnibus gewählt!");
+        console.log("Step 1 - Klasse Omnibus gewählt!");
 
         // show options
         document.getElementById("axles").classList.remove("hide");
@@ -155,7 +86,7 @@ function next() {
 
     //! GOODS VEHICLE START
     else if (vehicleType === "Goods Vehicle") {
-        console.log("Klasse Goods Vehicle gewählt!");
+        console.log("Step 1 - Klasse Goods Vehicle gewählt!");
 
         // show options
         document.getElementById("axles").classList.remove("hide");
@@ -174,7 +105,7 @@ function next() {
 
     //! TRAILER START
     else if (vehicleType === "Trailer") {
-        console.log("Klasse Trailer gewählt!");
+        console.log("Step 1 - Klasse Trailer gewählt!");
 
         // show options
         document.getElementById("axles").classList.remove("hide");
@@ -188,6 +119,177 @@ function next() {
     }
 }
 
+// function with variables set
+// calculate based on formula & output on screen
+// handle empty inputs
+function calculate(evt) {
+    evt.preventDefault();
+
+    // variables
+    let vehicleType = document.getElementById("vehicle-type").value;
+    let propultion = document.getElementById("propultion").value;
+    let axles = document.getElementById("axles").value;
+    let wheels = document.getElementById("wheels").value;
+    let gvm = document.getElementById("gvm").value;
+    let tare = document.getElementById("tare").value;
+    let seats = document.getElementById("seats").value;
+
+    let result = "";
+
+    //logic
+    //! CYCLE
+    if (vehicleType === "Cycle") {
+        console.log("Step 2 - Cycle");
+        // aa
+        if (propultion === "Human power only") {
+            output.textContent = "AA";
+            output.style.color = "black";
+        }
+        // ab
+        else if (propultion === "Support by auxiliary engine kl 300 Watts") {
+            output.textContent = "AB";
+            output.style.color = "black";
+        }
+        // la
+        else if (
+            propultion === "Piston engine kl 50ccm & Vmax kl 50km/h" &&
+            wheels === "1 front, 1 rear"
+        ) {
+            output.textContent = "LA";
+            output.style.color = "black";
+        }
+        // lb1
+        else if (
+            propultion === "Piston engine kl 50ccm & Vmax kl 50km/h" &&
+            wheels === "1 front, 2 rear"
+        ) {
+            output.textContent = "LB1";
+            output.style.color = "black";
+        } else if (
+            propultion === "Other engine kl 50ccm & Vmax kl 50km/h" &&
+            wheels === "1 front, 2 rear"
+        ) {
+            output.textContent = "LB1";
+            output.style.color = "black";
+        }
+        // lb2
+        else if (
+            propultion === "Piston engine kl 50ccm & Vmax kl 50km/h" &&
+            wheels === "2 front, 1 rear"
+        ) {
+            output.textContent = "LB2";
+            output.style.color = "black";
+        } else if (
+            propultion === "Other engine kl 50ccm & Vmax kl 50km/h" &&
+            wheels === "2 front, 1 rear"
+        ) {
+            output.textContent = "LB2";
+            output.style.color = "black";
+        }
+        // lc
+        else if (
+            propultion === "Piston engine gr 50ccm & Vmax gr 50km/h" &&
+            wheels === "1 front, 1 rear"
+        ) {
+            output.textContent = "LC";
+            output.style.color = "black";
+        }
+        // ld
+        else if (
+            propultion === "Piston engine gr 50ccm & Vmax gr 50km/h" &&
+            wheels === "Side-car"
+        ) {
+            output.textContent = "LD";
+            output.style.color = "black";
+        }
+        // le1
+        else if (
+            propultion === "Piston engine gr 50ccm & Vmax gr 50km/h" &&
+            wheels === "1 front, 2 rear"
+        ) {
+            output.textContent = "LE1";
+            output.style.color = "black";
+        }
+        // le2
+        else if (
+            propultion === "Piston engine gr 50ccm & Vmax gr 50km/h" &&
+            wheels === "2 front, 1 rear"
+        ) {
+            output.textContent = "LE2";
+            output.style.color = "black";
+        }
+    }
+
+    //! PASSENGER VEHICLE
+    else if (vehicleType === "Passenger Vehicle") {
+        console.log("Step 2 - Passenger Vehicle");
+    }
+    // ma
+    // mb
+    // mc
+
+    //! OMNIBUS
+    else if (vehicleType === "Omnibus") {
+        console.log("Step 2 - Omnibus");
+        // md1
+        if (gvm <= 3500 && seats <= 12) {
+            output.textContent = "MD1";
+            output.style.color = "black";
+        }
+        // md2
+        else if (gvm <= 3500 && seats > 12) {
+            output.textContent = "MD2";
+            output.style.color = "black";
+        }
+        // md3
+        else if (gvm > 3500 && gvm <= 4500) {
+            output.textContent = "MD3";
+            output.style.color = "black";
+        }
+        // md4
+        else if (gvm > 4500 && gvm <= 5000) {
+            output.textContent = "MD4";
+            output.style.color = "black";
+        }
+        // me
+        else if (gvm > 5000) {
+            output.textContent = "ME";
+            output.style.color = "black";
+        }
+    }
+    //! GOODS VEHICLE
+    else if (vehicleType === "Goods vehicle") {
+        console.log("Step 2 - Goods Vehicle");
+        // na
+        // nb
+        // nc
+    }
+
+    //! TRAILER
+    else if (vehicleType === "Trailer") {
+        console.log("Step 2 - Trailer");
+        // ta
+        if (axles === 1 && gvm <= 750) {
+            output.textContent = "TA";
+            output.style.color = "black";
+        }
+        // tb
+        if (gvm <= 3500) {
+            output.textContent = "TB";
+            output.style.color = "black";
+        }
+        // tc
+        if (gvm > 3500 && gvm <= 10000) {
+            output.textContent = "TC";
+            output.style.color = "black";
+        }
+        // td
+        if (gvm > 10000) {
+            output.textContent = "TD";
+            output.style.color = "black";
+        }
+    }
+}
 // reset button
 function reset() {
     output.textContent = "";
