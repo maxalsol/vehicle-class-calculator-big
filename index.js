@@ -233,32 +233,32 @@ function calculate(evt) {
         console.log("Step 2 - Omnibus");
         // md1
         if (gvm <= 3500 && seats <= 12) {
-            output.textContent = "MD1";
+            output.textContent = "MD1 - Light Omnibus";
             output.style.color = "black";
         }
         // md2
         else if (gvm <= 3500 && seats > 12) {
-            output.textContent = "MD2";
+            output.textContent = "MD2 - Light Omnibus";
             output.style.color = "black";
         }
         // md3
         else if (gvm > 3500 && gvm <= 4500) {
-            output.textContent = "MD3";
+            output.textContent = "MD3 - Light Omnibus";
             output.style.color = "black";
         }
         // md4
         else if (gvm > 4500 && gvm <= 5000) {
-            output.textContent = "MD4";
+            output.textContent = "MD4 - Light Omnibus";
             output.style.color = "black";
         }
         // me
         else if (gvm > 5000) {
-            output.textContent = "ME";
+            output.textContent = "ME - Heavy Omnibus";
             output.style.color = "black";
         }
     }
     //! GOODS VEHICLE
-    else if (vehicleType === "Goods vehicle") {
+    else if (vehicleType === "Goods Vehicle") {
         console.log("Step 2 - Goods Vehicle");
         // na
         // nb
@@ -270,22 +270,22 @@ function calculate(evt) {
         console.log("Step 2 - Trailer");
         // ta
         if (axles === 1 && gvm <= 750) {
-            output.textContent = "TA";
+            output.textContent = "TA - Very light trailer";
             output.style.color = "black";
         }
         // tb
         if (gvm <= 3500) {
-            output.textContent = "TB";
+            output.textContent = "TB - Light trailer";
             output.style.color = "black";
         }
         // tc
         if (gvm > 3500 && gvm <= 10000) {
-            output.textContent = "TC";
+            output.textContent = "TC - Medium trailer";
             output.style.color = "black";
         }
         // td
         if (gvm > 10000) {
-            output.textContent = "TD";
+            output.textContent = "TD - Heavy trailer";
             output.style.color = "black";
         }
     }
