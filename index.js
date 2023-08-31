@@ -231,20 +231,23 @@ function calculate(evt) {
             wheels === "2 front, 4 rear"
         ) {
             // ma
-            if (seats < 9) {
+            if (seats <= 9) {
                 output.textContent = "MA - Passenger car";
                 output.style.color = "black";
             }
-            // // mb
-            // else if (seats <= 9 && ) {
-            //     output.textContent = "MB - Forward control passenger vehicle";
-            //     output.style.color = "black";
-            // }
-            // // mc
-            // else if () {
-            //     output.textContent = "MC - Off-road passenger vehicle";
-            //     output.style.color = "black";
-            // }
+            // mb
+            //? how forward control?
+            //? checkbox for steering wheel in front quarter
+            else if (seats <= 9 && ) {
+                output.textContent = "MB - Forward control passenger vehicle";
+                output.style.color = "black";
+            }
+            // mc
+            //? checkbox for 4WD then options
+            else if () {
+                output.textContent = "MC - Off-road passenger vehicle";
+                output.style.color = "black";
+            }
         }
     }
 
@@ -285,7 +288,8 @@ function calculate(evt) {
                 (wheels === "1 front, 2 rear" ||
                     wheels === "2 front, 1 rear")) ||
             wheels === "2 front, 2 rear" ||
-            wheels === "2 front, 4 rear"
+            wheels === "2 front, 4 rear" ||
+            wheels === "2 front, 8 rear"
         ) {
             // na
             if (gvm <= 3500) {

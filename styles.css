@@ -207,25 +207,6 @@ ul {
     margin: 8px;
 }
 
-/* #table {
-    margin: 5px;
-    border: 1px solid #003b5c;
-    /* background: none transparent scroll repeat 0% 0%
-}
-#table-header {
-    border-bottom: 1px solid #003b5c;
-}
-#table-body {
-    border: 1px solid #003b5c;
-}
-.table-row {
-    border: 1px solid #003b5c;
-}
-.table-head {
-}
-.table-data {
-} */
-
 footer {
     display: flex;
     align-items: flex-end;
