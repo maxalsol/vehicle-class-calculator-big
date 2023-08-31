@@ -223,10 +223,30 @@ function calculate(evt) {
     //! PASSENGER VEHICLE
     else if (vehicleType === "Passenger Vehicle") {
         console.log("Step 2 - Passenger Vehicle");
+        if (
+            (gvm > 1000 &&
+                (wheels === "1 front, 2 rear" ||
+                    wheels === "2 front, 1 rear")) ||
+            wheels === "2 front, 2 rear" ||
+            wheels === "2 front, 4 rear"
+        ) {
+            // ma
+            if (seats < 9) {
+                output.textContent = "MA - Passenger car";
+                output.style.color = "black";
+            }
+            // // mb
+            // else if (seats <= 9 && ) {
+            //     output.textContent = "MB - Forward control passenger vehicle";
+            //     output.style.color = "black";
+            // }
+            // // mc
+            // else if () {
+            //     output.textContent = "MC - Off-road passenger vehicle";
+            //     output.style.color = "black";
+            // }
+        }
     }
-    // ma
-    // mb
-    // mc
 
     //! OMNIBUS
     else if (vehicleType === "Omnibus") {
@@ -260,9 +280,29 @@ function calculate(evt) {
     //! GOODS VEHICLE
     else if (vehicleType === "Goods Vehicle") {
         console.log("Step 2 - Goods Vehicle");
-        // na
-        // nb
-        // nc
+        if (
+            (gvm > 1000 &&
+                (wheels === "1 front, 2 rear" ||
+                    wheels === "2 front, 1 rear")) ||
+            wheels === "2 front, 2 rear" ||
+            wheels === "2 front, 4 rear"
+        ) {
+            // na
+            if (gvm <= 3500) {
+                output.textContent = "NA - Light Goods Vehicle";
+                output.style.color = "black";
+            }
+            // nb
+            else if (gvm > 3500 && gvm <= 12000) {
+                output.textContent = "NB - Medium Goods Vehicle";
+                output.style.color = "black";
+            }
+            // nc
+            else if (gvm > 12000) {
+                output.textContent = "NC - Heavy Goods Vehicle";
+                output.style.color = "black";
+            }
+        }
     }
 
     //! TRAILER
