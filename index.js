@@ -223,6 +223,7 @@ function calculate(evt) {
     //! PASSENGER VEHICLE
     else if (vehicleType === "Passenger Vehicle") {
         console.log("Step 2 - Passenger Vehicle");
+
         if (
             (gvm > 1000 &&
                 (wheels === "1 front, 2 rear" ||
@@ -231,20 +232,20 @@ function calculate(evt) {
             wheels === "2 front, 4 rear"
         ) {
             // ma
-            if (seats <= 9) {
+            if (seats <= 9 && checkbox === "ma") {
                 output.textContent = "MA - Passenger car";
                 output.style.color = "black";
             }
             // mb
             //? how forward control?
             //? checkbox for steering wheel in front quarter
-            else if (seats <= 9 && ) {
+            else if (seats <= 9 && checkbox === "mb") {
                 output.textContent = "MB - Forward control passenger vehicle";
                 output.style.color = "black";
             }
             // mc
             //? checkbox for 4WD then options
-            else if () {
+            else if (seats <= 9 && checkbox === "mc") {
                 output.textContent = "MC - Off-road passenger vehicle";
                 output.style.color = "black";
             }

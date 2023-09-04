@@ -18,13 +18,46 @@ body {
 }
 
 header {
-    height: 150px;
+    height: 200px;
+}
+
+.navbar {
+    background-color: #015485;
+    color: white;
+    overflow: hidden;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-link {
+    display: block;
+    padding: 14px 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+/* Style for mobile menu (hidden by default) */
+.nav-toggle {
+    display: none;
+}
+
+.bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px auto;
 }
 
 h1 {
     color: darkgreen;
     text-align: center;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
 }
 
 #description {
@@ -222,8 +255,23 @@ a {
     color: black;
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 600px) {
     main {
         margin-top: 50px;
+    }
+    .nav-list {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    .nav-link {
+        padding: 14px 20px;
+        text-align: center;
+        width: 100%;
+    }
+    .nav-toggle {
+        display: block;
     }
 }
