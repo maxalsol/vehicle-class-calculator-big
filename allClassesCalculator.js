@@ -16,7 +16,6 @@ submitBtn.addEventListener("touchend", calculate);
 resetBtn.addEventListener("touchend", reset);
 
 // next button
-
 function next() {
     // variables
     let vehicleType = document.getElementById("vehicle-type").value;
@@ -119,9 +118,7 @@ function next() {
     }
 }
 
-// function with variables set
-// calculate based on formula & output on screen
-// handle empty inputs
+// handling of inputs
 function calculate(evt) {
     evt.preventDefault();
 
@@ -134,7 +131,7 @@ function calculate(evt) {
     let tare = document.getElementById("tare").value;
     let seats = document.getElementById("seats").value;
 
-    let result = "";
+    // let result = "";
 
     //logic
     //! CYCLE
