@@ -15,20 +15,66 @@
                     <span class="bar"></span>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="#" class="nav-link">Home</a></li>
-                    <li><a href="#" class="nav-link">MA-NA Calculator</a></li>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+
                     <li>
-                        <a href="#" class="nav-link">ALL classes Calculator</a>
+                        <a href="allClasses.html" class="nav-link"
+                            >ALL classes Calculator</a
+                        >
                     </li>
-                    <li><a href="#" class="nav-link">Tipps</a></li>
-                    <li><a href="#" class="nav-link">Legend</a></li>
+                    <li>
+                        <a href="manaClasses.html" class="nav-link"
+                            >MA-NA Calculator</a
+                        >
+                    </li>
+                    <li><a href="tipps.html" class="nav-link">Tipps</a></li>
+                    <li><a href="legend.html" class="nav-link">Legend</a></li>
                 </ul>
             </nav>
             <br />
             <h1>MA-NA Class Claculator</h1>
             <br />
+            <p id="description">
+                This calculator is for use to differentiate between vehicle
+                classes MA and NA.
+            </p>
         </header>
-        <main></main>
+        <main>
+            <main>
+                <form id="input-form" method="POST">
+                    <label for="gvm">GVM:</label>
+                    <input
+                        id="gvm"
+                        type="number"
+                        name="gvm"
+                        placeholder="0kg"
+                    /><br />
+                    <label for="tare">Tare Weight:</label>
+                    <input
+                        id="tare"
+                        type="number"
+                        name="tare"
+                        placeholder="0kg"
+                    /><br />
+                    <label for="seats">Number of seats:</label>
+                    <input
+                        id="seats"
+                        type="number"
+                        name="seats"
+                        placeholder="0"
+                    /><br />
+                    <button id="submit-btn" type="submit">Calculate</button
+                    ><br />
+                    <button id="reset-btn" type="reset">Reset</button>
+                </form>
+                <br />
+                <p id="output-container">
+                    Vehicle class: <br />
+                    <span id="output"></span>
+                    <br />
+                </p>
+            </main>
+        </main>
         <br />
         <footer id="footer">
             <p style="text-align: center">
@@ -41,6 +87,6 @@
                 All rights reserved.
             </p>
         </footer>
-        <script src="index.js"></script>
+        <script src="manaCalculator.js"></script>
     </body>
 </html>
