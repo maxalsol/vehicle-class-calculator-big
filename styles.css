@@ -18,10 +18,10 @@ body {
 }
 
 header {
-    height: 200px;
+    height: auto;
 }
 
-.navbar {
+.nav-bar {
     background-color: #015485;
     color: white;
     overflow: hidden;
@@ -45,14 +45,6 @@ header {
 /* Style for mobile menu (hidden by default) */
 .nav-toggle {
     display: none;
-    border: white;
-}
-
-.bar {
-    background-color: white;
-    height: 3px;
-    width: 25px;
-    margin: 2px;
 }
 
 h1 {
@@ -258,8 +250,8 @@ a {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 600px) {
-    main {
-        margin-top: 50px;
+    .nav-bar {
+        background-color: #015485;
     }
     .nav-list {
         width: 100%;
@@ -273,6 +265,12 @@ a {
         width: 100%;
     }
     .nav-toggle {
-        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-icon {
+        height: 30px;
+        width: 30px;
+        margin-left: 5px;
     }
 }
