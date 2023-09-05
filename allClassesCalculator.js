@@ -49,19 +49,24 @@ function next() {
     else if (vehicleType === "Passenger Vehicle") {
         console.log("Step 1 - Klasse Passenger Vehicle gewählt!");
 
-        // show options
-        document.getElementById("axles").classList.remove("hide");
-        document.getElementById("wheels").classList.remove("hide");
-        document.getElementById("gvm").classList.remove("hide");
-        document.getElementById("tare").classList.remove("hide");
-        document.getElementById("seats").classList.remove("hide");
+        // show p-v-options
+        document
+            .getElementById("passenger-vehicle-options")
+            .classList.remove("hide");
 
-        // show labels
-        document.getElementById("axles-label").classList.remove("hide");
-        document.getElementById("wheels-label").classList.remove("hide");
-        document.getElementById("gvm-label").classList.remove("hide");
-        document.getElementById("tare-label").classList.remove("hide");
-        document.getElementById("seats-label").classList.remove("hide");
+        // // show options
+        // document.getElementById("axles").classList.remove("hide");
+        // document.getElementById("wheels").classList.remove("hide");
+        // document.getElementById("gvm").classList.remove("hide");
+        // document.getElementById("tare").classList.remove("hide");
+        // document.getElementById("seats").classList.remove("hide");
+
+        // // show labels
+        // document.getElementById("axles-label").classList.remove("hide");
+        // document.getElementById("wheels-label").classList.remove("hide");
+        // document.getElementById("gvm-label").classList.remove("hide");
+        // document.getElementById("tare-label").classList.remove("hide");
+        // document.getElementById("seats-label").classList.remove("hide");
     }
 
     //! OMNIBUS START
