@@ -16,6 +16,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 /** HEADER **/
 header {
     height: auto;
@@ -278,7 +279,7 @@ a {
         padding: 0 1em;
         list-style: none;
     }
-    ul li::before {
+    ul .nav-li::before {
         content: "▶";
         display: block;
         left: 5px;
