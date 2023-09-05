@@ -54,6 +54,11 @@ function next() {
             .getElementById("passenger-vehicle-options")
             .classList.remove("hide");
 
+        // show p-v-o-labels
+        document
+            .getElementById("passenger-vehicle-options-label")
+            .classList.remove("hide");
+
         // // show options
         // document.getElementById("axles").classList.remove("hide");
         // document.getElementById("wheels").classList.remove("hide");
@@ -226,6 +231,11 @@ function calculate(evt) {
     else if (vehicleType === "Passenger Vehicle") {
         console.log("Step 2 - Passenger Vehicle");
 
+        let ma = "MA - Passenger car";
+        let mb = "MB - Forward control passenger vehicle";
+        let mc = "MC - Off-road passenger vehicle";
+        let forwardControled = true;
+
         if (
             (gvm > 1000 &&
                 (wheels === "1 front, 2 rear" ||
@@ -234,21 +244,21 @@ function calculate(evt) {
             wheels === "2 front, 4 rear"
         ) {
             // ma
-            if (seats <= 9 && checkbox === "ma") {
-                output.textContent = "MA - Passenger car";
+            if (seats <= 9 && !mb && !mc) {
+                output.textContent = ma;
                 output.style.color = "black";
             }
             // mb
             //? how forward control?
             //? checkbox for steering wheel in front quarter
-            else if (seats <= 9 && checkbox === "mb") {
-                output.textContent = "MB - Forward control passenger vehicle";
+            else if (seats <= 9 && !mc && forwardControled) {
+                output.textContent = mb;
                 output.style.color = "black";
             }
             // mc
             //? checkbox for 4WD then options
             else if (seats <= 9 && checkbox === "mc") {
-                output.textContent = "MC - Off-road passenger vehicle";
+                output.textContent = mc;
                 output.style.color = "black";
             }
         }
