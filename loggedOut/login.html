@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <form id="loginForm">
+                <h1>Login</h1>
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+
+                <span id="error" class="error"></span>
+
+                <p class="forgot-password">
+                    <a href="password-reset.html" id="forgotPassword"
+                        >Forgot Password?</a
+                    >
+                </p>
+
+                <button type="submit">Login</button>
+
+                <p class="not-member-yet">
+                    <a href="register.html" id="notMemberYet"
+                        >Not a Member Yet? Sign Up Now!</a
+                    >
+                </p>
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

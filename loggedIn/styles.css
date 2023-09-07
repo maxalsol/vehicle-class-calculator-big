@@ -111,6 +111,17 @@ input {
     -moz-appearance: textfield;
 }
 
+.fourwd-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 360px;
+}
+
+input[type="checkbox"] {
+    width: 40px;
+}
+
 input:hover {
     box-shadow: 0;
 }
@@ -166,6 +177,15 @@ select:-moz-placeholder {
 }
 
 #next-btn {
+    background-color: #015485;
+    color: aliceblue;
+    font-size: larger;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+#next-btn-2 {
     background-color: #015485;
     color: aliceblue;
     font-size: larger;

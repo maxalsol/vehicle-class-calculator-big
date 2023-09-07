@@ -1,5 +1,6 @@
 // setup variables for input and output & access
 let nextBtn = document.getElementById("next-btn");
+let nextBtn2 = document.getElementById("next-btn-2");
 let submitBtn = document.getElementById("submit-btn");
 let resetBtn = document.getElementById("reset-btn");
 let output = document.getElementById("output");
@@ -7,11 +8,13 @@ let output = document.getElementById("output");
 // eventhandler
 // click
 nextBtn.addEventListener("click", next);
+nextBtn2.addEventListener("click", nextTwo);
 submitBtn.addEventListener("click", calculate);
 resetBtn.addEventListener("click", reset);
 
 // touch
 nextBtn.addEventListener("touchend", next);
+nextBtn2.addEventListener("touchend", nextTwo);
 submitBtn.addEventListener("touchend", calculate);
 resetBtn.addEventListener("touchend", reset);
 
@@ -19,14 +22,6 @@ resetBtn.addEventListener("touchend", reset);
 function next() {
     // variables
     let vehicleType = document.getElementById("vehicle-type").value;
-    let propultion = document.getElementById("propultion").value;
-    let axles = document.getElementById("axles").value;
-    let wheels = document.getElementById("wheels").value;
-    let gvm = document.getElementById("gvm").value;
-    let tare = document.getElementById("tare").value;
-    let seats = document.getElementById("seats").value;
-
-    let wheelsLabel = document.getElementById("wheels-label");
 
     //! CYCLES START
     if (vehicleType === "Cycle") {
@@ -58,20 +53,6 @@ function next() {
         document
             .getElementById("passenger-vehicle-options-label")
             .classList.remove("hide");
-
-        // // show options
-        // document.getElementById("axles").classList.remove("hide");
-        // document.getElementById("wheels").classList.remove("hide");
-        // document.getElementById("gvm").classList.remove("hide");
-        // document.getElementById("tare").classList.remove("hide");
-        // document.getElementById("seats").classList.remove("hide");
-
-        // // show labels
-        // document.getElementById("axles-label").classList.remove("hide");
-        // document.getElementById("wheels-label").classList.remove("hide");
-        // document.getElementById("gvm-label").classList.remove("hide");
-        // document.getElementById("tare-label").classList.remove("hide");
-        // document.getElementById("seats-label").classList.remove("hide");
     }
 
     //! OMNIBUS START
@@ -125,6 +106,24 @@ function next() {
         document.getElementById("axles-label").classList.remove("hide");
         document.getElementById("wheels-label").classList.remove("hide");
         document.getElementById("gvm-label").classList.remove("hide");
+    }
+
+    if (vehicleType === "Passenger Vehicle") {
+        nextBtn2.classList.remove("hide");
+    }
+}
+
+// second next button
+function nextTwo() {
+    // variables
+    let option = document.getElementById("passenger-vehicle-options").value;
+
+    if (option === "Passenger Car") {
+        console.log("Passenger Car chosen");
+    } else if (option === "Forward Controlled Vehicle") {
+        console.log("Forward Controlled Vehicle chosen");
+    } else if (option === "4WD") {
+        console.log("4WD chosen");
     }
 }
 
@@ -234,7 +233,8 @@ function calculate(evt) {
         let ma = "MA - Passenger car";
         let mb = "MB - Forward control passenger vehicle";
         let mc = "MC - Off-road passenger vehicle";
-        let forwardControled = true;
+        let forwardControlled = true;
+        let fourWD = true;
 
         if (
             (gvm > 1000 &&
@@ -251,13 +251,13 @@ function calculate(evt) {
             // mb
             //? how forward control?
             //? checkbox for steering wheel in front quarter
-            else if (seats <= 9 && !mc && forwardControled) {
+            else if (seats <= 9 && !mc && forwardControlled) {
                 output.textContent = mb;
                 output.style.color = "black";
             }
             // mc
             //? checkbox for 4WD then options
-            else if (seats <= 9 && checkbox === "mc") {
+            else if (seats <= 9 && fourWD) {
                 output.textContent = mc;
                 output.style.color = "black";
             }
