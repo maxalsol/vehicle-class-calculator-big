@@ -299,7 +299,7 @@ a {
         padding: 0 1em;
         list-style: none;
     }
-    ul .nav-li::before {
+    /* ul .nav-li::before {
         content: "▶";
         display: block;
         left: 5px;
@@ -307,7 +307,7 @@ a {
         width: 0;
         top: 0.725em;
         position: relative;
-    }
+    } */
     .nav-link {
         padding: 14px 20px;
         text-align: center;

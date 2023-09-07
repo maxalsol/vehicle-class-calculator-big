@@ -351,17 +351,26 @@ function calculate(evt) {
 function reset() {
     output.textContent = "";
 
+    // inputs
     document.getElementById("propultion").classList.add("hide");
     document.getElementById("axles").classList.add("hide");
     document.getElementById("wheels").classList.add("hide");
     document.getElementById("gvm").classList.add("hide");
     document.getElementById("tare").classList.add("hide");
     document.getElementById("seats").classList.add("hide");
+    document.getElementById("passenger-vehicle-options").classList.add("hide");
 
+    // labels
     document.getElementById("propultion-label").classList.add("hide");
     document.getElementById("axles-label").classList.add("hide");
     document.getElementById("wheels-label").classList.add("hide");
     document.getElementById("gvm-label").classList.add("hide");
     document.getElementById("tare-label").classList.add("hide");
     document.getElementById("seats-label").classList.add("hide");
+    document
+        .getElementById("passenger-vehicle-options-label")
+        .classList.add("hide");
+
+    // buttons
+    nextBtn2.classList.add("hide");
 }
