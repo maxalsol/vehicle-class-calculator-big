@@ -1,3 +1,11 @@
+// hamburger menu button
+const mobileMenuButton = document.getElementById("mobile-menu");
+const navList = document.querySelector(".nav-list");
+
+mobileMenuButton.addEventListener("click", () => {
+    navList.classList.toggle("nav-toggle");
+});
+
 // login
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
