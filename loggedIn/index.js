@@ -10,7 +10,3 @@ accountButton.addEventListener("click", (evt) => {
     evt.preventDefault();
     // accountDropdown.classList.toggle("nav-toggle");
 });
-accountButton.addEventListener("touchend", (evt) => {
-    evt.preventDefault();
-    // accountDropdown.classList.toggle("nav-toggle");
-});
