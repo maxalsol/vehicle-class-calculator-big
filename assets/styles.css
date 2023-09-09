@@ -23,11 +23,7 @@ header {
     width: 100%;
 }
 
-#logoipsum {
-    position: absolute;
-    left: 10px;
-    top: 4px;
-}
+/* here */
 
 .nav-bar {
     background-color: #015485;
@@ -49,6 +45,10 @@ header {
     text-align: center;
     color: white;
     text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: rgb(154, 189, 232);
 }
 
 /* Style for mobile menu (hidden by default) */
@@ -77,7 +77,7 @@ header {
 /* Add a red background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: rgb(154, 189, 232);
 }
 
 /* Dropdown content (hidden by default) */
@@ -349,7 +349,6 @@ a {
     #logoipsum {
         position: absolute;
         right: 7px;
-        color: white;
     }
     .nav-bar {
         background-color: #015485;
@@ -395,8 +394,16 @@ a {
     /* MAIN */
 }
 
-@media screen and (max-width: 670px) {
+@media only screen and (min-width: 381px) and (max-width: 680px) {
     #logoipsum {
         display: none;
+    }
+}
+
+@media screen and (min-width: 681px) {
+    #logoipsum {
+        position: absolute;
+        left: 10px;
+        top: 4px;
     }
 }
