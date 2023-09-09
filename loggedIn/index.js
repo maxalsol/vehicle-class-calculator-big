@@ -5,6 +5,12 @@ mobileMenuButton.addEventListener("click", () => {
 });
 
 const accountButton = document.getElementById("acc-btn");
+const accountDropdown = document.querySelector(".dropdown-content");
 accountButton.addEventListener("click", (evt) => {
     evt.preventDefault();
+    // accountDropdown.classList.toggle("nav-toggle");
+});
+accountButton.addEventListener("touch", (evt) => {
+    evt.preventDefault();
+    // accountDropdown.classList.toggle("nav-toggle");
 });
