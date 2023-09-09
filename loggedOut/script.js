@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
     const error = document.getElementById("error");
 
-    loginForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    loginForm.addEventListener("submit", function (evt) {
+        evt.preventDefault();
 
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (username === "admin" && password === "1234") {
             error.textContent = "Login successful!";
             error.style.color = "green";
-            // Redirect or perform some action here
+            //! Redirect or perform some action here
         } else {
             error.textContent = "Invalid username or password!";
             error.style.color = "red";
@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const registrationForm = document.getElementById("registrationForm");
     const error = document.getElementById("error");
 
-    registrationForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    registrationForm.addEventListener("submit", function (evt) {
+        evt.preventDefault();
 
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (emailRegex.test(email) && passwordRegex.test(password)) {
             error.textContent = "Registration successful!";
             error.style.color = "green";
-            // Redirect or perform some action here
+            //! Redirect or perform some action here
         } else {
             error.textContent =
                 "Invalid email or password does not meet complexity requirements!";
@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const error = document.getElementById("error");
     const forgotPassword = document.getElementById("forgotPassword");
 
-    loginForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    loginForm.addEventListener("submit", function (evt) {
+        evt.preventDefault();
 
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (username === "admin" && password === "1234") {
             error.textContent = "Login successful!";
             error.style.color = "green";
-            // Redirect or perform some action here
+            //! Redirect or perform some action here
         } else {
             error.textContent = "Invalid username or password!";
             error.style.color = "red";
@@ -94,19 +94,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const email = document.getElementById("email").value;
 
-        // Simulate email validation; replace with your real validation
+        //! Simulate email validation; replace with your real validation
         if (email.includes("@")) {
             error.textContent = "Reset instructions sent to email!";
             error.style.color = "green";
-            // Normally, you'd send a request to your server here
+            //! Normally, you'd send a request to your server here
         } else {
             error.textContent = "Invalid email address!";
             error.style.color = "red";
         }
     });
 
-    backToLogin.addEventListener("click", function (e) {
-        e.preventDefault();
+    backToLogin.addEventListener("click", function (evt) {
+        evt.preventDefault();
         window.location.href = "login.html"; // Redirect to login page
     });
 });
@@ -118,19 +118,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const forgotPassword = document.getElementById("forgotPassword");
     const notMemberYet = document.getElementById("notMemberYet");
 
-    loginForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    loginForm.addEventListener("submit", function (evt) {
+        evt.preventDefault();
 
-        // ... (your existing login validation code)
+        //! ... (your existing login validation code)
     });
 
-    forgotPassword.addEventListener("click", function (e) {
-        e.preventDefault();
-        // ... (your existing forgot password code)
+    forgotPassword.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        //! ... (your existing forgot password code)
     });
 
-    notMemberYet.addEventListener("click", function (e) {
-        e.preventDefault();
+    notMemberYet.addEventListener("click", function (evt) {
+        evt.preventDefault();
         window.location.href = "register.html"; // Redirect to registration page
     });
 });
@@ -141,14 +141,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const error = document.getElementById("error");
     const alreadyMember = document.getElementById("alreadyMember");
 
-    registrationForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    registrationForm.addEventListener("submit", function (evt) {
+        evt.preventDefault();
 
-        // ... (your existing registration validation code)
+        //! ... (your existing registration validation code)
     });
 
-    alreadyMember.addEventListener("click", function (e) {
-        e.preventDefault();
+    alreadyMember.addEventListener("click", function (evt) {
+        evt.preventDefault();
         window.location.href = "login.html"; // Redirect to login page
     });
 });
